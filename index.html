@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="description" content="个人制作的学习用网站"/>
+    <meta name="keywords" content="HTML, CSS, XML"/>
+    <link rel="stylesheet" type="text/css" href="css/HappyNewYear.css">
+    <title>新年快乐！</title>
+</head>
+<body>
+<div style="position: relative">
+    <div class="title">
+        <p>新年快乐！小仙女</p>
+    </div>
+    <div class="word">
+        <span id="word-10" style="white-space: pre-wrap"></span>
+        <span id="heart" style="opacity: 0">❤</span>
+    </div>
+    <canvas id="drawHeart">您的浏览器等级太低，不支持画布功能，请升级浏览器或更换其他浏览器</canvas>
+    <canvas id="canvas">您的浏览器等级太低，不支持画布功能，请升级浏览器或更换其他浏览器</canvas>
+</div>
+<audio id='music' controls="controls" autoplay="autoplay" loop="loop" style="display: none">
+    <source src="music/Distance.mp3">
+</audio>
+<script src="js/HappyNewYear.js"></script>
+<script>
+    function music(){
+    let mus = document.getElementById('music')
+    if(mus.paused){
+        mus.paused = false;
+        mus.play();
+    }
+}
+setInterval(music, 1)
+</script>
+</body>
+</html>
