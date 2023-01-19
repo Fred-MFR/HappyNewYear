@@ -137,11 +137,12 @@ function name1(){
         document.getElementById('heart').style.animation = 'heart 0.7s infinite';
     }
 }
-let mus = document.getElementById('music')
-window.addEventListener('click', function () {
-if (mus.paused){
-    mus.play()
-}else {
-    mus.pause()
+let mus = document.getElementById('music');
+function music() {
+    if (mus.paused){
+        mus.play()
+    }else {
+        clearInterval(playMusic);
+    }
 }
-})
+let playMusic = setInterval(music, 1);
